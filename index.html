@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <title>Fen-Land</title>
+    <style>
+        html,body {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;;
+        }
+        .scene {
+            width: 100vw;
+            height: 100vh;
+            background: #f0f8ff;
+            position: relative;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .scene::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 3rem;
+            left: 3rem;
+            border-color: #233;
+            border-width: 4px;
+            border-top: solid;
+            border-left: solid;
+            width: 2rem;
+            height: 2rem;
+        }
+        .scene::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 3rem;
+            bottom: 3rem;
+            border-color: #233;
+            border-width: 4px;
+            border-right: solid;
+            border-bottom: solid;
+            width: 2rem;
+            height: 2rem;
+        }
+        .scene .center {
+            text-align: center;
+        }
+        .scene .logo {
+            width: 5rem;
+            height: 5rem;
+        }
+        .scene h1 {
+            font-size: 3.2rem;
+            font-weight: 300;
+        }
+        a.btn {
+            font-size: 1.4rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: #223333 solid 2px;
+            text-decoration: none;
+            color: #223333;
+            font-weight: normal;
+        }
+        p {
+            font-weight: lighter;
+            word-spacing: 0.2rem;
+            letter-spacing: 2px;
+            font-size: 1.8rem;
+        }
+        .scene article {
+            padding: 4.5rem 8rem;
+            box-sizing: border-box;
+            text-align: left;
+            overflow: auto;
+            width: 100%;
+        }
+        .scene article h2 {
+            font-weight: 300;
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="scene">
+        <div class="center">
+            <img class="logo" src="assets/logo.png" alt="Logo">
+            <h1>Fen</h1>
+            <p>Simple Framework To Create Server on <a href="https://deno.land" target="_blank">deno</a></p>
+            <p><a class="btn" href="https://github.com/fen-land/deno-fen" target="_blank">Github</a></p>
+        </div>
+    </section>
+    <section class="scene">
+        <article>
+            <h2>Introduction</h2>
+            <p>Fen is a simple web framework that help you to build web server.</p>
+            <p>It's powerful with tool and process, which will be more in later version.</p>
+            <p>Help us by join us or commit issues on github.</p>
+        </article>
+    </section>
+    <section class="scene">
+        <article>
+            <h2>How to use</h2>
+            <p>First, you need install deno:</p>
+            <code>
+                curl -fsSL https://deno.land/x/install/install.sh | sh
+            </code>
+            <p>Second, import server from github:</p>
+            <code>
+                import { Server } from "https://github.com/fen-land/deno-fen/raw/master/server.ts";<br/>
+                const s = new Server();<br/>
+                s.start();<br/>
+            </code>
+            <p>Finally, run script in the command line:</p>
+            <code>
+                deno ${yours}.ts -A
+            </code>
+        </article>
+    </section>
+</body>
+</html>
